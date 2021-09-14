@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<catalog>
+	 <solder>
+		 <surname>Петров</surname>
+		 <year>1996</year>
+		 <number>11197</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Семёнов</surname>
+		 <year>1998</year>
+		 <number>11187</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Орехов</surname>
+		 <year>1986</year>
+		 <number>10197</number>
+		 <useful>Не пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Заикаев</surname>
+		 <year>1987</year>
+		 <number>11097</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Ходырев</surname>
+		 <year>1997</year>
+		 <number>11207</number>
+		 <useful>Не пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Аркашин</surname>
+		 <year>1996</year>
+		 <number>11199</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Фролов</surname>
+		 <year>1998</year>
+		 <number>11190</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Несмиянов</surname>
+		 <year>1986</year>
+		 <number>10191</number>
+		 <useful>Не пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Грищук</surname>
+		 <year>1987</year>
+		 <number>11094</number>
+		 <useful>Пригоден</useful>
+	 </solder>
+	 <solder>
+		 <surname>Подсвиров</surname>
+		 <year>1997</year>
+		 <number>11307</number>
+		 <useful>Не пригоден</useful>
+	 </solder>
+</catalog>
