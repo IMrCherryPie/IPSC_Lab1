@@ -11,7 +11,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class DomXMLParser {
+public class XMLParser {
 
     public static ArrayList<Solder> getSolder() throws SAXException {
 
@@ -25,7 +25,7 @@ public class DomXMLParser {
             // Получаем корневой элемент
             Node root = document.getDocumentElement();
 
-            System.out.println("List of solder:");
+//            System.out.println("List of solder:");
             System.out.println();
             // Просматриваем все подэлементы корневого - т.е. солдата
             NodeList solder = root.getChildNodes();
@@ -48,9 +48,7 @@ public class DomXMLParser {
                 }
             }
 
-        } catch (ParserConfigurationException ex) {
-            ex.printStackTrace(System.out);
-        } catch (IOException ex) {
+        } catch (ParserConfigurationException | IOException ex) {
             ex.printStackTrace(System.out);
         }
 
