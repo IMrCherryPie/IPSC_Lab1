@@ -9,17 +9,27 @@ public class Solder implements Comparable<Solder> {
 
     private String useful;
 
-    public void smurtSelct (String nodeName, String item) {
-        if ("surname".equals(nodeName)) {
-            setSurname(item);
-        } else if ("year".equals(nodeName)) {
-            setYear((Integer.parseInt(item)));
-        } else if ("number".equals(nodeName)) {
-            setNumber((long) Integer.parseInt(item));
-        } else if ("useful".equals(nodeName)) {
-            setUseful(item);
-        } else {
-            System.out.println("Не предусмотрено поле -> " + nodeName);
+    public void smartSelect(String nodeName, String item) {
+
+        switch (nodeName){
+            case "surname":
+                setSurname(item);
+                break;
+            case "year":
+                setYear((Integer.parseInt(item)));
+                break;
+
+            case "number":
+                setNumber((long) Integer.parseInt(item));
+                break;
+
+            case "useful":
+                setUseful(item);
+                break;
+            default:
+                System.out.println("Не предусмотрено поле -> " + nodeName);
+
+
         }
     }
 

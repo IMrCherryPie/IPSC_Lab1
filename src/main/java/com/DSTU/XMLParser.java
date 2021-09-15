@@ -40,7 +40,7 @@ public class XMLParser {
                         // Если нода не текст, то это один из параметров солдата - печатаем
                         if (solderProp.getNodeType() != Node.TEXT_NODE) {
 //                            System.out.println(solderProp.getNodeName() + ":" + solderProp.getChildNodes().item(0).getTextContent());
-                            solder1.smurtSelct(solderProp.getNodeName(), solderProp.getChildNodes().item(0).getTextContent());
+                            solder1.smartSelect(solderProp.getNodeName(), solderProp.getChildNodes().item(0).getTextContent());
                         }
                     }
 //                    System.out.println("===========>>>>");

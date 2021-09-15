@@ -10,8 +10,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class App1 {
 
@@ -50,7 +48,7 @@ public class App1 {
             for (int i = 0; i < nodes.getLength(); i++) {
 //                nodes.item(i).getNodeValue();
 
-                solder.smurtSelct(nodes.item(i).getNodeName(), nodes.item(i).getTextContent());
+                solder.smartSelect(nodes.item(i).getNodeName(), nodes.item(i).getTextContent());
             }
         } catch (XPathExpressionException e) {
             e.printStackTrace();
