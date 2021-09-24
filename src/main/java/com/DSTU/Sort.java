@@ -6,17 +6,13 @@ import java.util.TreeSet;
 public class Sort {
     public TreeSet<Solder> getSolderByYearOfConscription(int year, ArrayList<Solder> allSolders){
 
-        TreeSet<Solder> solders = new TreeSet<Solder>();
+        TreeSet<Solder> solders = new TreeSet<>();
 
-        for (int i = 0; i < allSolders.size(); i++) {
-            Solder solder = new Solder();
-            solder = allSolders.get(i);
-            int dif = year - solder.getYear();
-            if (dif >= 18){
+        allSolders.forEach(solder -> {
+            if (year - solder.getYear() >= 18)
                 solders.add(solder);
-            }
+        });
 
-        }
         return solders;
     }
 }

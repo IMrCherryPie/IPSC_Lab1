@@ -15,7 +15,7 @@ public class XMLParser {
 
     public static ArrayList<Solder> getSolder() throws SAXException {
 
-        ArrayList<Solder> solders = new ArrayList<Solder>();
+        ArrayList<Solder> solders = new ArrayList<>();
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
