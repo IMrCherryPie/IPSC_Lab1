@@ -25,7 +25,6 @@ public class XMLParser {
             // Получаем корневой элемент
             Node root = document.getDocumentElement();
 
-//            System.out.println("List of solder:");
             System.out.println();
             // Просматриваем все подэлементы корневого - т.е. солдата
             NodeList solder = root.getChildNodes();
@@ -39,11 +38,9 @@ public class XMLParser {
                         Node solderProp = solderProps.item(j);
                         // Если нода не текст, то это один из параметров солдата - печатаем
                         if (solderProp.getNodeType() != Node.TEXT_NODE) {
-//                            System.out.println(solderProp.getNodeName() + ":" + solderProp.getChildNodes().item(0).getTextContent());
                             solder1.smartSelect(solderProp.getNodeName(), solderProp.getChildNodes().item(0).getTextContent());
                         }
                     }
-//                    System.out.println("===========>>>>");
                     solders.add(solder1);
                 }
             }
@@ -52,8 +49,6 @@ public class XMLParser {
             ex.printStackTrace(System.out);
         }
 
-//        System.out.println("------------------------");
-//        System.out.println(solders);
         return solders;
     }
 }

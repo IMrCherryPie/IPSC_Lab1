@@ -9,15 +9,17 @@ public class App {
 
     public static void main(String[] args) throws SAXException {
         ArrayList<Solder> solders = new ArrayList<>(XMLParser.getSolder());
+        sortedSolders(solders);
+    }
+
+    public static void sortedSolders(ArrayList<Solder> solders) {
         System.out.println("\nAll solders:\n");
-        System.out.println(solders);
+        solders.forEach(System.out::println);
         TreeSet<Solder> set = new TreeSet<>(new Sort().getSolderByYearOfConscription(2015, solders));
 
         System.out.println("<=========================>");
         System.out.println("\nSolders by year of draft and order: \n");
-        for (Object o: set) {
-            System.out.println(o);
-        }
+        set.forEach(System.out::println);
         Write.writeToXMLSolder(set);
     }
 }
