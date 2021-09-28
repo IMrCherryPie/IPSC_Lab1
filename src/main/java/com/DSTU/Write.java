@@ -2,15 +2,16 @@ package com.DSTU;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Set;
+import java.util.Collection;
 
 public class Write {
 
-    static void writeToXMLSolder(Set<Solder> set){
+    static void writeToXMLSolder(Collection<Solder> solders){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<catalog>");
-        for (Solder solder: set) {
+
+        for (Solder solder: solders) {
             stringBuilder.append("\n\t <solder>");
             stringBuilder.append("\n\t\t <surname>");
             stringBuilder.append(solder.getSurname());
@@ -34,7 +35,7 @@ public class Write {
         new Write().write(stringBuilder.toString());
     }
 
-    public void write(String string) {
+    private void write(String string) {
         try (FileWriter writer = new FileWriter("src/main/resources/new.xml", false)) {
             // запись всей строки
             writer.write(string);

@@ -3,27 +3,19 @@ package com.DSTU;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class XMLParser {
 
-    public static ArrayList<Solder> getSolder() throws SAXException {
+    public static Collection<Solder> getSolder(Document doc) {
 
-        ArrayList<Solder> solders = new ArrayList<>();
-        try {
-            // Создается построитель документа
-            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            // Создается дерево DOM документа из файла
-            Document document = documentBuilder.parse("src/main/resources/10var.xml");
+        Collection<Solder> solders = new ArrayList<>();
 
-            // Получаем корневой элемент
-            Node root = document.getDocumentElement();
+        // Получаем корневой элемент
+        if (doc!=null){
+            Node root = doc.getDocumentElement();
 
             System.out.println();
             // Просматриваем все подэлементы корневого - т.е. солдата
@@ -44,9 +36,8 @@ public class XMLParser {
                     solders.add(solder1);
                 }
             }
-
-        } catch (ParserConfigurationException | IOException ex) {
-            ex.printStackTrace(System.out);
+        }else{
+            System.out.println("Документ пустой");
         }
 
         return solders;
